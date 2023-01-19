@@ -1,0 +1,36 @@
+plugins {
+    id 'war'
+    id 'java'
+}
+
+group 'com.ggyu-admin'
+version '1.0-SNAPSHOT'
+
+repositories {
+    google()
+    mavenCentral()
+    mavenCentral()
+}
+
+dependencies {
+    implementation 'org.springframework:spring-webmvc:5.3.20'
+    compileOnly 'org.projectlombok:lombok:1.18.22'
+    annotationProcessor 'org.projectlombok:lombok:1.18.22'
+
+    // TEST
+    testImplementation 'junit:junit:4.11'
+    testImplementation 'org.junit.jupiter:junit-jupiter-api:5.9.2'
+    testRuntimeOnly 'org.junit.jupiter:junit-jupiter-engine:5.9.2'
+    testCompileOnly 'org.projectlombok:lombok:1.18.22'
+    testAnnotationProcessor 'org.projectlombok:lombok:1.18.22'
+}
+
+test {
+    useJUnitPlatform()
+}
+
+configurations {
+    compileOnly {
+        extendsFrom annotationProcessor
+    }
+}
