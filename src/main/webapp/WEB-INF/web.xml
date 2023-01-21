@@ -5,7 +5,7 @@
          version="4.0">
     <context-param>
         <param-name>contextConfigLocation</param-name>
-₩        <param-value>./WEB-INF/applicationContext.xml</param-value>
+        <param-value>/WEB-INF/applicationContext.xml</param-value>
     </context-param>
     <listener>
         <!-- listener 를 설정하면 반드시 applicationContext.xml 이 있어야 한다. -->
